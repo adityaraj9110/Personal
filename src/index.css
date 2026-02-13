@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary: #ff4d6d;
+  --secondary: #ff8fa3;
+  --accent: #fff0f3;
+  --background: #fff5f8;
+  --header-font: 'Dancing Script', cursive;
+  --body-font: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  font-family: var(--body-font);
+  overflow: hidden;
+  /* Prevent scroll */
+  color: #333;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 3rem;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  z-index: 10;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-size: 3.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+  color: #d63384;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  height: 60px;
+  /* Space for buttons */
+}
+
+.btn {
+  padding: 0.8rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: var(--body-font);
+}
+
+.btn-yes {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+}
+
+.btn-yes:hover {
+  transform: scale(1.05);
+  background-color: #ff2e55;
+  box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
+}
+
+.btn-no {
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-no:hover {
+  background-color: #fff0f3;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+}
+
+/* Animations */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.3);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.3);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+.heart-icon {
+  color: var(--primary);
+  font-size: 4rem;
+  animation: heartbeat 1.5s infinite;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.floating-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 2rem;
+  animation: floatUp 15s linear infinite;
+  bottom: -50px;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
