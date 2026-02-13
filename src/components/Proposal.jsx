@@ -54,14 +54,16 @@ const Proposal = ({ onYes }) => {
                 <div className="apology-section">
                     <p>
                         I know things haven't been perfect lately, and I am truly sorry for
-                        my mistakes. You mean the world to me, and I can't imagine my life
-                        without you. My love for you grows stronger every single day.
+                        my mistakes. You mean the world to me,and somwhere you know this. My love for you grows stronger every single day.
+                        Sorry maine tmhe gussa dilaya and mai manta hu. Pr I don't want you to change yourself
+                        for me. I want you to be the same person I met.Keep loving me, keep irritating me
+                        keep making me laugh and keep making me cry. Keep being you. I love you mera beta ❤️!
                     </p>
                 </div>
 
                 <div className="proposal-section">
                     <div className="heart-icon">💖</div>
-                    <h2>Will you be my Valentine?</h2>
+                    <h2>Will you be my Valentine? Meri Bhutki, Meri Dduugu</h2>
 
                     <div className="button-group">
                         <motion.button

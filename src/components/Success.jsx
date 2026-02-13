@@ -42,9 +42,9 @@ const Success = () => {
                 <p>
                     I knew you'd say YES! <br />
                     I promise to make every day special for you. <br />
-                    Happy Valentine's Week! 🌹
+                    Happy Valentine's! 🌹
                 </p>
-                <p>I love you so much!</p>
+                <p>I love you so much! Meri Bhutki 🥰</p>
             </motion.div>
         </div>
     );
